@@ -16,6 +16,6 @@ He said in the introduction that students have to be able to code the first two 
 Some resources:  
 
 The assignment: [https://cs193p.sites.stanford.edu/sites/g/files/sbiybj16636/files/media/file/a1.pdf](https://cs193p.sites.stanford.edu/sites/g/files/sbiybj16636/files/media/file/a1.pdf)  
-[https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)  
-[https://swift.org/documentation/api-design-guidelines/](https://swift.org/documentation/api-design-guidelines/)  
-[https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
+A Swift Tour: [https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)  
+API : [https://swift.org/documentation/api-design-guidelines/](https://swift.org/documentation/api-design-guidelines/)  
+The Basics: [https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
