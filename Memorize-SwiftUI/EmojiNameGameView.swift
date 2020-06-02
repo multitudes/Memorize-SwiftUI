@@ -13,11 +13,11 @@ struct EmojiNameGameView: View {
     
     var body: some View {
         Grid(viewModel.cards) { card in
-                CardView(card: card).onTapGesture {
-                    self.viewModel.choose(card: card)
-                }
-        .padding(5)
+            CardView(card: card).onTapGesture {
+                self.viewModel.choose(card: card)
             }
+            .padding(5)
+        }
         .padding()
         .foregroundColor(Color.orange)
     }
@@ -31,37 +31,34 @@ struct CardView: View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
         }
-        
     }
     
+    @ViewBuilder
     private func body(for size: CGSize) -> some View {
-        ZStack {
-            if self.card.isFaceUp {
-                RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
-                RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
-                Pie(startAngle: Angle.degrees(0 - 90), endAngle: Angle.degrees(300-90), clockwise: true).padding(5).opacity(0.4)
-                Text(self.card.content)
-            } else {
-                if !card.isMatched {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill()
+        if card.isFaceUp || !card.isMatched {
+                ZStack {
+                    Pie(startAngle: Angle.degrees(0 - 90), endAngle: Angle.degrees(300-90), clockwise: true).padding(5).opacity(0.4)
+                    Text(self.card.content).font(Font.system(size: fontSize(for: size)))
                 }
-                
-            }
+                //.cardify(isFaceUp: card.isFaceUp)
+                .modifier(Cardify(isFaceUp: card.isFaceUp))
+                }
         }
-        .font(Font.system(size: fontSize(for: size)))
-    }
+
     
     // MARK: - Drawing constants
     
-    private let cornerRadius: CGFloat = 10
-    private let edgeLineWidth: CGFloat = 3
     private func fontSize(for size: CGSize) -> CGFloat {
         return min(size.width, size.height) * 0.70
     }
 }
 
 
-
+extension View {
+    func cardify(isFaceUp: Bool) {
+        self.modifier(Cardify(isFaceUp: isFaceUp))
+    }
+}
 
 
 
