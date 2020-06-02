@@ -72,15 +72,15 @@
 		456B4F5624753981008A7B86 /* Memorize-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				456B4F5724753981008A7B86 /* AppDelegate.swift */,
-				456B4F5924753981008A7B86 /* SceneDelegate.swift */,
 				456B4F5B24753981008A7B86 /* EmojiNameGameView.swift */,
-				454E8A7624865A6600E8CE0F /* Cardify.swift */,
 				454E8A742486512D00E8CE0F /* Pie.swift */,
 				45936146247D5611000D71DF /* Grid.swift */,
+				454E8A7624865A6600E8CE0F /* Cardify.swift */,
+				45B78467247AB14B002436AE /* EmojiMemoryGame.swift */,
+				456B4F5724753981008A7B86 /* AppDelegate.swift */,
+				456B4F5924753981008A7B86 /* SceneDelegate.swift */,
 				4593614A247D659F000D71DF /* Array+Identifiable.swift */,
 				45936148247D6135000D71DF /* GridLayout.swift */,
-				45B78467247AB14B002436AE /* EmojiMemoryGame.swift */,
 				45B78463247AADBD002436AE /* MemoryGame.swift */,
 				4593614C247D9EC7000D71DF /* Array+Only.swift */,
 				456B4F5D24753984008A7B86 /* Assets.xcassets */,
