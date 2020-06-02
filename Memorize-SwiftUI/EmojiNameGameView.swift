@@ -12,21 +12,19 @@ struct EmojiNameGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
-        
         VStack {
             Grid(viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
-                    withAnimation(.linear(duration: 0.5)){
+                    withAnimation(.linear(duration: 0.75)){
                         self.viewModel.choose(card: card)
                     }
-                    
                 }
                 .padding(5)
             }
             .padding()
             .foregroundColor(Color.orange)
             Button(action: {
-                withAnimation(.easeInOut(duration: 0.5)) {
+                withAnimation(.easeInOut) {
                         self.viewModel.resetGame()
                 }
                 
@@ -66,13 +64,6 @@ struct CardView: View {
     
     private func fontSize(for size: CGSize) -> CGFloat {
         return min(size.width, size.height) * 0.70
-    }
-}
-
-
-extension View {
-    func cardify(isFaceUp: Bool) {
-        self.modifier(Cardify(isFaceUp: isFaceUp))
     }
 }
 
